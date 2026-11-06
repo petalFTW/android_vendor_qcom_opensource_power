@@ -355,5 +355,12 @@
         <Config
             Id="0x00001339" Enable="true" Timeout="0" Target="canoe"
             Resources="0x40400000, 0x1, 0x40800000, 0x553, 0x40C20000, 0x14, 0x40C1C000, 0x1E"/>
+
+        <!-- petal deep idle: screen off + deep restricted idle on, cap near the efficient bit -->
+        <!-- canoe is 2 clusters only (targetconfig: 0=big cpu0-5, 1=prime cpu6-7), no little opcode -->
+        <!-- B max 1.747 Ghz of 3.32, P max 1.997 Ghz of 3.80. real opp steps off the phone -->
+        <Config
+            Id="0x00001350" Enable="true" Timeout="0" Target="canoe"
+            Resources="0x40804000, 0x6D3, 0x40804200, 0x7CC"/>
     </Powerhint>
 </HintConfigs>
